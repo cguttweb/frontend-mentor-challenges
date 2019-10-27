@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <style>
+    .attribution {
+      color: #333;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(257, 40%, 49%);
+    }
+
+    body {
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    main {
+      background-color: hsl(257, 40%, 49%);
+      background-image: url(./images/bg-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 2rem;
+      padding: 0 2rem 0.5rem 2rem;
+    }
+
+    .logo {
+      float: left;
+      padding: 2rem 0;
+      width: 100px;
+    }
+
+    .mockup {
+      width: 250px;
+    }
+
+    .info {
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 0 2rem;
+    }
+
+    button {
+      background: #fff;
+      border-radius: 1rem;
+      color: hsl(257, 40%, 49%);
+      font-size: 11px;
+      margin: 1rem 0 2rem 0;
+      padding: 0.5rem 1rem;
+      width: 120px;
+    }
+
+    .social {
+      display: flex;
+      font-size: 0.6rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .social i {
+      border: 1px solid #fff;
+      border-radius: 100%;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    /* @media(min-width: 350px) and (max-width: 480px) {
+      body {
+        max-width: 100%;
+      }
+
+      .logo,
+      .mockup {
+        display: block;
+      }
+    } */
+
+    @media(min-width:768px) {
+      body {
+        max-width: 100%;
+      }
+
+      main {
+        background-position: 35% 75%;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: auto;
+      }
+
+      .logo {
+        padding-left: 2rem;
+      }
+
+      .mockup {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        padding-left: 2rem;
+        width: 400px;
+      }
+
+      .main-info {
+        grid-column: 2 / 4;
+        grid-row: 3 / 2;
+        margin-left: 1rem;
+        text-align: left;
+      }
+
+      h1 {
+        font-weight: 600;
+        padding-right: 1.5rem;
+      }
+
+      button {
+        grid-row: 4;
+        grid-column: 2;
+        margin-left: 2rem;
+      }
+
+      .social {
+        grid-column: 3;
+        grid-row: 5;
+      }
+    }
+
+    @media(min-width: 900px) {
+      body {
+        margin: auto;
+        max-width: 1440px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img class="logo" src="./images/logo.svg" alt="Huddle Logo">
+
+    <img class="mockup" src="./images/illustration-mockups.svg" alt="Mockups">
+    <section class="main-info">
+      <h1>Build The Community Your Fans Will Love</h1>
+
+      <p class="info">Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+        Create
+        connections
+        with your users as you engage in genuine discussion.</p>
+      <button class="register">Register</button>
+    </section>
+
+    <section class="social">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </section>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/cguttweb">Chloe</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
