@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet"> 
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Single Price Grid Component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
 
-     body {
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
       background: hsl(204, 43%, 93%);
       display: flex;
       flex-direction: column;
@@ -30,19 +36,20 @@
     }
 
     button {
-      background:  hsl(71, 73%, 54%);
+      background: hsl(71, 73%, 54%);
       border-radius: 5px;
-      color: #fff; 
+      color: #fff;
       font-size: 16px;
       font-weight: 700;
       padding: 0.5rem 0;
       width: 100%;
     }
 
-    h3 { 
-      color:hsl(179, 90%, 43%);
+    h3 {
+      color: hsl(179, 90%, 43%);
     }
-    h3 + h4 {
+
+    h3+h4 {
       color: hsl(71, 73%, 54%);
     }
 
@@ -64,13 +71,13 @@
     }
 
     .monthly {
-      background:hsl(179, 62%, 43%);
+      background: hsl(179, 62%, 43%);
       padding-top: 0.25rem;
       padding-bottom: 1rem;
     }
 
     .why-us {
-      background:hsla(179, 54%, 43%, 0.87);
+      background: hsla(179, 54%, 43%, 0.87);
       padding: 1rem;
     }
 
@@ -88,73 +95,78 @@
       list-style: none;
     }
 
-    @media (min-width:768px){
+    @media (min-width:768px) {
       main {
         margin: 0 auto;
         max-width: 1440px;
       }
-      /* .join {
-        border: 2px solid red;
-      } */
+
       .two-col {
         display: flex;
         width: 100%;
       }
+
       .monthly,
       .why-us {
-       width: 50%;
+        width: 50%;
+      }
+
+      button:hover {
+        background-color: green;
       }
     }
   </style>
 </head>
+
 <body>
   <main>
-      <div class="join">
+    <div class="join">
       <h3>Join our community</h3>
 
       <h4>30-day, hassle-free money back guarantee</h4>
-    
+
       <p>
-        Gain access to our full library of tutorials along with expert code reviews. 
+        Gain access to our full library of tutorials along with expert code reviews.
         Perfect for any developers who are serious about honing their skills.
       </p>
-      </div>
-      <div class="two-col">
-        
-        <div class="monthly">
-          
-          <h4>Monthly Subscription</h4>
-          
-          <span class="cost">&dollar;29</span> per month
-          
-          <p>Full access for less than &dollar;1 a day</p>
-          
-          <button>Sign Up</button>
-        </div>
-        
-        <div class="why-us">
-          <h4>Why Us</h4>
+    </div>
+    <div class="two-col">
 
-          <ul>
-            <li>Tutorials by industry experts</li>
-            <li>Peer &amp; expert code review</li>
-            <li>Coding exercises</li>
-            <li>Access to our GitHub repos</li>
-            <li>Community forum</li>
-            <li>Flashcard decks</li>
-            <li>New videos every week</li>
-          </ul>
+      <section class="monthly">
 
-        </div>
-      </div>
-      </main>
+        <h4>Monthly Subscription</h4>
 
-  
+        <span class="cost">&dollar;29</span> per month
+
+        <p>Full access for less than &dollar;1 a day</p>
+
+        <button type="button" class="sign-up">Sign Up</button>
+      </section>
+
+      <section class="why-us">
+        <h4>Why Us</h4>
+
+        <ul>
+          <li>Tutorials by industry experts</li>
+          <li>Peer &amp; expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+
+      </section>
+    </div>
+  </main>
+
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Chloe</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://dev.to/cguttweb" target="_blank">Chloe</a>.
     </p>
   </footer>
 </body>
+
 </html>
