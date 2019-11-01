@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+      font-size: 16px;
+    }
+
+    body {
+      background-color: hsl(0, 100%, 74%);
+      font-size: 1rem;
+      text-align: center;
+      max-width: 375px;
+    }
+
+    form {
+      background-color: #ffffff;
+    }
+
+    input,
+    button {
+      display: block;
+      margin: auto;
+    }
+
+    .terms {
+      color: hsl(249, 10%, 26%);
+      font-size: 0.7rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Learn to code by watching others</h1>
+
+  <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+    but understanding how developers think is invaluable.</p>
+
+  <button class="try">Try it free 7 days then $20/mo. thereafter</button>
+
+  <form action="#">
+
+    <input type="text" name="firstName" id="firstname" aria-required="true">
+    <input type="text" name="lastName" id="lastname" aria-required="true">
+    <input type="email" name="email" id="email" aria-required="true">
+    <input type="text" name="password" id="password" aria-required="true">
+
+    <button type="button" class="claim">Claim your free trial</button>
+
+    <p class="terms">By clicking the button, you are agreeing to our Terms and Services</p>
+  </form>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#" target="_blank">Chloe</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
