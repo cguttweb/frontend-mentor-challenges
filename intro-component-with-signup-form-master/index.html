@@ -4,16 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
   <style>
     .attribution {
-      font-size: 11px;
+      font-size: 0.6rem;
       text-align: center;
     }
 
@@ -27,24 +25,63 @@
 
     body {
       background-color: hsl(0, 100%, 74%);
-      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
       text-align: center;
       max-width: 375px;
     }
 
     form {
       background-color: #ffffff;
+      border-radius: 0.25rem;
+      padding-top: 1rem;
     }
 
-    input,
-    button {
+    input {
+      border-radius: 0.25rem;
+      border: 1px solid lightgrey;
       display: block;
+      padding: 0.5rem;
       margin: auto;
     }
 
-    .terms {
-      color: hsl(249, 10%, 26%);
+    button {
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
       font-size: 0.7rem;
+      padding: 0.5rem;
+    }
+
+    .try {
+      background-color: hsl(248, 32%, 49%);
+      color: #ffffff;
+      line-height: 1.5;
+      padding: 1rem 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .try span {
+      font-weight: bold;
+    }
+
+    .claim {
+      background-color: hsl(154, 59%, 51%);
+      color: #ffffff;
+      margin-top: 0.5rem;
+      /* padding: 0.5rem 1rem; */
+      text-transform: uppercase;
+    }
+
+    .terms {
+      color: hsl(246, 25%, 77%);
+      font-size: 0.6rem;
+      padding: 0.5rem 1rem 1rem 1rem;
+    }
+
+    .terms a {
+      color: hsl(0, 100%, 74%);
+      font-weight: bold;
     }
   </style>
 </head>
@@ -53,27 +90,27 @@
 
   <h1>Learn to code by watching others</h1>
 
-  <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-    but understanding how developers think is invaluable.</p>
+  <p class="intro">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+    understanding how developers think is invaluable.</p>
 
-  <button class="try">Try it free 7 days then $20/mo. thereafter</button>
+  <button class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
 
   <form action="#">
 
-    <input type="text" name="firstName" id="firstname" aria-required="true">
-    <input type="text" name="lastName" id="lastname" aria-required="true">
-    <input type="email" name="email" id="email" aria-required="true">
-    <input type="text" name="password" id="password" aria-required="true">
+    <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-required="true">
+    <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-required="true">
+    <input type="email" name="email" id="email" placeholder="Email Address" aria-required="true">
+    <input type="text" name="password" id="password" placeholder="Password" aria-required="true">
 
     <button type="button" class="claim">Claim your free trial</button>
 
-    <p class="terms">By clicking the button, you are agreeing to our Terms and Services</p>
+    <p class="terms">By clicking the button, you are agreeing to our <a>Terms and Services</a></p>
   </form>
 
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#" target="_blank">Chloe</a>.
+      Coded by <a href="https://dev.to/cguttweb" target="_blank">Chloe</a>.
     </p>
   </footer>
 </body>
