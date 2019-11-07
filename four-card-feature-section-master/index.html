@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Four card feature section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
 
     :root {
       font-family: 'Poppins', sans-serif;
@@ -20,12 +28,12 @@
 
     body {
       background-color: #ffffff;
-      color:hsl(234, 12%, 34%);
+      color: hsl(234, 12%, 34%);
       font-weight: 400;
       text-align: right;
     }
-  
-    h1, 
+
+    h1,
     h2 {
       margin: 0;
       text-align: center;
@@ -48,7 +56,7 @@
     }
 
     h3,
-    h3 + p {
+    h3+p {
       text-align: left;
     }
 
@@ -58,7 +66,7 @@
       line-height: 1.5;
     }
 
-    section h3, 
+    section h3,
     section p {
       padding: 0 1rem;
     }
@@ -89,12 +97,18 @@
       padding-top: 1rem;
     }
 
-    @media(min-width:1200px){
-      main {
+    @media(min-width:1200px) {
+      .cards {
         display: grid;
         margin: 0 auto;
-        grid-template-columns: repeat(3, 400px);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
+        /* grid-template-areas:
+          ". builder ."
+          "supervisor builder calculator"
+          "supervisor karma calculator"
+          ". karma ."; */
+        gap: 2rem;
         margin: auto;
         max-width: 1200px;
       }
@@ -112,7 +126,7 @@
       .info {
         grid-column: 2;
       }
-      
+
       *[class] h3 {
         margin-top: 0;
       }
@@ -121,73 +135,79 @@
         grid-row: 3;
       }
 
-      .supervisor, 
+      .supervisor,
       .builder,
       .karma,
       .calculator {
         margin: 0 1rem;
-      } 
+      }
 
       .supervisor {
+        grid-area: "supervisor";
         grid-column: 1;
-        grid-row: 4;
+        grid-row: 2;
       }
 
       .builder {
+        grid-area: "builder";
         grid-column: 2 / 3;
-        grid-row: 4;
+        grid-row: 2;
       }
 
       .karma {
+        grid-area: "karma";
         grid-column: 2 / 3;
-        margin-top: 2rem;
+        grid-row: 3;
       }
 
       .calculator {
+        grid-area: "calculator";
         grid-column: 3;
-        grid-row: 4;
+        grid-row: 2;
       }
     }
-
   </style>
 </head>
+
 <body>
-  <main role="contentinfo">
-  <h1>Reliable, efficient delivery</h1>
-  <h2>Powered by Technology</h2>
+  <main>
+    <h1>Reliable, efficient delivery</h1>
+    <h2>Powered by Technology</h2>
 
-  <p class="info">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+    <p class="info">Our Artificial Intelligence powered tools use millions of project data points to ensure that your
+      project is successful</p>
+    <section class="cards">
+      <div class="supervisor">
+        <h3>Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="./images/icon-supervisor.svg" alt="Supervisor card">
+      </div>
 
-  <section class="supervisor" role="complementary">
-    <h3>Supervisor</h3>
-    <p>Monitors activity to identify project roadblocks</p>
-    <img src="./images/icon-supervisor.svg" alt="Supervisor Section">
-  </section>
+      <div class="builder">
+        <h3>Team Builder</h3>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <img src="./images/icon-team-builder.svg" alt="Team Builder card">
+      </div>
 
-  <section class="builder" role="complementary">
-    <h3>Team Builder</h3>
-    <p>Scans our talent network to create the optimal team for your project</p>
-    <img src="./images/icon-team-builder.svg" alt="Team Builder Section">
-  </section>
+      <div class="karma">
+        <h3>Karma</h3>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="./images/icon-karma.svg" alt="Karma card">
+      </div>
 
-  <section class="karma"> 
-    <h3>Karma</h3>
-    <p>Regularly evaluates our talent to ensure quality</p>
-    <img src="./images/icon-karma.svg" alt="Karma Section">
-  </section>
-
-  <section class="calculator">
-    <h3>Calculator</h3>
-    <p>Uses data from past projects to provide better delivery estimates</p>
-    <img src="./images/icon-calculator.svg" alt="Calculator Section">
-  </section>
-
-</main>
+      <div class="calculator">
+        <h3>Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="./images/icon-calculator.svg" alt="Calculator card">
+      </div>
+    </section>
+  </main>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://cgweb.co.uk">Chloe</a>.
     </p>
   </footer>
 </body>
+
 </html>
