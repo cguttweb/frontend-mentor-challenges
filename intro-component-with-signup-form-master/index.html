@@ -38,15 +38,20 @@
       padding-top: 1rem;
     }
 
-    input,
-    .claim {
-      /* border-radius: 0.25rem; */
-      /* border: 1px solid lightgrey; */
+    input {
+      border-radius: 0.25rem;
+      border: 1px solid #ebebeb;
       display: block;
-      /* padding: 0.5rem; */
+      padding: 0.5rem;
       margin: auto;
-      margin-top: 0.5rem;
-      width: 80%;
+      margin-top: 0.75rem;
+      width: 85%;
+    }
+
+    input {
+      background-image: url(./images/icon-error.svg);
+      background-position: right;
+      background-repeat: no-repeat;
     }
 
     button {
@@ -73,10 +78,10 @@
     .claim {
       background-color: hsl(154, 59%, 51%);
       color: #ffffff;
-      /* margin-top: 0.5rem; */
+      margin-top: 0.75rem;
       /* padding: 0.75rem 0; */
       text-transform: uppercase;
-      /* width: 80%; */
+      width: 90%;
     }
 
     .terms {
@@ -94,37 +99,58 @@
       body {
         font-size: 1rem;
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 1000px;
       }
 
       main {
         display: grid;
-        grid-template-areas: 
-        "headline . ."
-        "headline try-button . "
-        "intro form ."
-        "footer footer footer";
+        grid-template-columns: 400px;
+        grid-template-rows: 100px 50px 150px 150px auto;
+        grid-template-areas:
+          ". . ."
+          ". try-button . "
+          "headline form ."
+          "intro form ."
+          ". form ."
+          "footer footer footer";
       }
 
       h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
         grid-area: headline;
+        text-align: left;
       }
 
       .intro {
-        grid-area: intro
+        grid-area: intro;
+        font-size: 0.9rem;
+        text-align: left;
       }
 
       .try {
-        grid-area: try-button
+        grid-area: try-button;
+        padding: 0;
       }
 
       form {
+        border-radius: 0.25rem;
         grid-area: form;
-        margin-bottom: 5rem;
       }
 
-      input {
-        width: 80%;
+      .try,
+      form {
+        box-shadow: 0 5px 5px hsl(260, 2%, 37%);
+      }
+
+      input,
+      .claim {
+        font-weight: bold;
+        padding: 1rem;
+      }
+
+      .claim:hover {
+        background-color: hsl(133, 57%, 43%);
       }
 
       footer {
@@ -144,12 +170,11 @@
 
     <button class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
 
-    <form action="#">
-
-      <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-required="true" title="firstname">
-      <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-required="true" title="lastname">
-      <input type="email" name="email" id="email" placeholder="Email Address" aria-required="true" title="email">
-      <input type="text" name="password" id="password" placeholder="Password" aria-required="true" title="password">
+    <form action="#" method="POST">
+      <input type="text" name="firstName" id="firstname" placeholder="First Name" required="true" title="firstname">
+      <input type="text" name="lastName" id="lastname" placeholder="Last Name" required="true" title="lastname">
+      <input type="email" name="email" id="email" placeholder="Email Address" required="true" title="email">
+      <input type="password" name="password" id="password" placeholder="Password" required="true" title="password">
 
       <button type="button" class="claim">Claim your free trial</button>
 
@@ -165,6 +190,17 @@
   </main>
 
   <script>
+    // Get Submit
+    const submitBtn = document.querySelector('.claim');
+    // Add Event Listeners
+    submitBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      alert('test');
+      // Check input values are not blank
+      if (input === '') {
+        alert('empty fields');
+      }
+    })
   </script>
 </body>
 
