@@ -23,6 +23,11 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 header {
   display: flex;
 }
@@ -66,6 +71,7 @@ button {
 
 .fylo-works a {
   color: hsl(170, 45%, 43%);
+  text-decoration: underline;
 }
 
 .avatar {
@@ -87,9 +93,20 @@ button {
   text-align: center;
 }
 
-.company-info {
+.company-links {
   background-color: hsl(243, 87%, 12%);
   color: #ffffff;
+  text-align: center;
+}
+
+.company-links li {
+  list-style: none;
+}
+
+.contact-info,
+.about,
+.terms-privacy-info {
+  text-align: left;
 }
 
 .icon {
