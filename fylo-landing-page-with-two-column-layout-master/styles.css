@@ -3,6 +3,8 @@
 }
 
 body {
+  background-color: hsl(240, 75%, 98%);
+  color: hsl(243, 87%, 12%);
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.4;
@@ -65,6 +67,16 @@ button {
   margin-top: 0.5rem;
 }
 
+blockquote {
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+blockquote span {
+  font-weight: 700;
+}
+
 .fylo-works {
   text-align: center;
 }
@@ -114,7 +126,7 @@ button {
 }
 
 .social {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 
