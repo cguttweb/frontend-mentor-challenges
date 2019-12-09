@@ -9,7 +9,8 @@ body {
   font-size: 1rem;
   line-height: 1.4;
   margin: auto;
-  max-width: 320px;
+  max-width: 375px;
+  text-align: center;
 }
 
 h1,
@@ -17,7 +18,7 @@ h2,
 h3,
 button {
   font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 img {
@@ -35,14 +36,14 @@ header {
 }
 
 header img {
-  align-self: flex-start;
-  display: block;
+  align-self: center;
+  display: inline-block;
+  height: auto;
   width: 100px;
 }
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
   list-style: none;
   padding: 0;
 }
@@ -52,29 +53,45 @@ nav li {
   padding: 0.5rem;
 }
 
-input,
-button {
-  border-radius: 0.25rem;
+nav a {
+  color: inherit;
+}
+
+input {
+  border: 1px solid hsl(0, 0%, 75%);
   display: block;
+  height: 36px;
   max-width: 100%;
   width: 300px;
 }
 
 button {
   background-color: hsl(224, 93%, 58%);
+  border: none;
+  box-shadow: 3px 2px 2px hsl(0, 0%, 25%);
   color: #ffffff;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
+  width: 300px;
+  max-width: 100%;
 }
 
 blockquote {
   background-color: #ffffff;
   font-size: 0.9rem;
+  margin: 1rem 0;
   padding: 1rem;
 }
 
 blockquote span {
   font-weight: 700;
+}
+
+.intro,
+.secondary,
+.quote {
+  margin-bottom: 4rem;
+  padding: 0 2rem;
 }
 
 .fylo-works {
@@ -108,7 +125,13 @@ blockquote span {
 .company-links {
   background-color: hsl(243, 87%, 12%);
   color: #ffffff;
-  text-align: center;
+  line-height: 2;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.company-links > img {
+  margin-left: 2rem;
 }
 
 .company-links li {
@@ -134,4 +157,8 @@ blockquote span {
   border: 1px solid #ffffff;
   border-radius: 100%;
   padding: 0.5rem;
+}
+
+@media screen and (min-width: 900px){
+
 }
