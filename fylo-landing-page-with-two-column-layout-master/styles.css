@@ -61,8 +61,7 @@ input {
   border: 1px solid hsl(0, 0%, 75%);
   display: block;
   height: 36px;
-  max-width: 100%;
-  width: 300px;
+  width: 100%;
 }
 
 button {
@@ -70,10 +69,10 @@ button {
   border: none;
   box-shadow: 3px 2px 2px hsl(0, 0%, 25%);
   color: #ffffff;
+  height: 36px;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
 }
 
 blockquote {
@@ -159,6 +158,50 @@ blockquote span {
   padding: 0.5rem;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 90%;
+  }
 
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    height: auto;
+    max-width: 50%;
+  }
+
+  nav ul {
+    border: 1px solid red;
+    display: flex;
+  }
+
+  input,
+  button {
+    width: 300px;
+  }
+
+  blockquote {
+    float: left;
+    max-width: 30%;
+  }
+
+  .company-links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .company-links + img {
+    height: 80px;
+  }
+
+  .contact-info {
+    justify-self: flex-start;
+  }
+
+  .social {
+    align-self: center;
+  }
 }
