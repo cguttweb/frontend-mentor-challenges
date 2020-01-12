@@ -21,6 +21,14 @@ button {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -80,6 +88,7 @@ blockquote {
   font-size: 0.9rem;
   margin: 1rem 0;
   padding: 1rem;
+  text-align: left;
 }
 
 blockquote span {
@@ -90,7 +99,7 @@ blockquote span {
 .secondary,
 .quote {
   margin-bottom: 4rem;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .fylo-works {
@@ -129,7 +138,7 @@ blockquote span {
   text-align: left;
 }
 
-.company-links > img {
+.contact-info > img {
   margin-left: 2rem;
 }
 
@@ -158,9 +167,19 @@ blockquote span {
   padding: 0.5rem;
 }
 
+.mob-hide {
+  display: none;
+}
+
 @media screen and (min-width: 900px) {
   body {
-    max-width: 90%;
+    background-color: #fff;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .mob-hide {
+    display: block;
   }
 
   main {
@@ -173,9 +192,9 @@ blockquote span {
     max-width: 50%;
   }
 
-  nav ul {
-    border: 1px solid red;
-    display: flex;
+  header {
+    justify-content: space-between;
+    padding: 1rem 2rem;
   }
 
   input,
@@ -183,22 +202,82 @@ blockquote span {
     width: 300px;
   }
 
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .intro,
+  .secondary {
+    margin-bottom: 0;
+    padding: 3rem 2rem;
+  }
+
+  .intro,
+  .secondary {
+    display: flex;
+  }
+
+  .intro img,
+  .secondary img {
+    align-self: center;
+    max-height: 100vh;
+    order: 2;
+  }
+
+  .secondary {
+    background-color: hsl(240, 75%, 98%);
+  }
+
+  .fylo-works {
+    text-align: left;
+  }
+
   blockquote {
     float: left;
-    max-width: 30%;
+    max-width: 60%;
+  }
+
+  .early-access {
+    align-items: center;
+    display: flex;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .early-access h3 {
+    font-size: 1.5rem;
+  }
+
+  .early-access-text,
+  .early-access-signup {
+    width: 50%;
+  }
+
+  .early-access-signup {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+  }
+
+  .early-access button {
+    padding: 0.5rem;
+    width: auto;
   }
 
   .company-links {
     display: flex;
+    font-size: 0.8rem;
     justify-content: space-around;
-  }
-
-  .company-links + img {
-    height: 80px;
+    padding: 4rem;
   }
 
   .contact-info {
-    justify-self: flex-start;
+    float: left;
   }
 
   .social {
