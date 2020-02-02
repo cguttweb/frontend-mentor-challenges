@@ -212,13 +212,9 @@ blockquote span {
 
   .intro,
   .secondary {
-    margin-bottom: 0;
-    padding: 3rem 2rem;
-  }
-
-  .intro,
-  .secondary {
     display: flex;
+    margin-bottom: 0;
+    padding: 3rem 4rem;
   }
 
   .intro img,
@@ -228,8 +224,21 @@ blockquote span {
     order: 2;
   }
 
+  .intro input {
+    float: left;
+  }
+
+  .intro button {
+    margin: 0 0 0 0.5rem;
+    padding: 0.5rem 2rem;
+    width: auto;
+  }
+
   .secondary {
     background-color: hsl(240, 75%, 98%);
+    border-top-left-radius: 30% 20%;
+    border-top-right-radius: 30% 20%;
+    padding-top: 5rem;
   }
 
   .fylo-works {
@@ -238,13 +247,17 @@ blockquote span {
 
   blockquote {
     float: left;
-    max-width: 60%;
+    max-width: 50%;
+  }
+
+  .quote {
+    padding: 1rem;
   }
 
   .early-access {
     align-items: center;
     display: flex;
-    padding: 2rem;
+    padding: 4rem;
     text-align: left;
   }
 
@@ -278,9 +291,5 @@ blockquote span {
 
   .contact-info {
     float: left;
-  }
-
-  .social {
-    align-self: center;
   }
 }
