@@ -16,8 +16,10 @@
 
 <body>
   <header>
-    <img src="./images/logo.svg" alt="Logo">
-    <nav>
+    <img class="logo" src="./images/logo.svg" alt="Logo" />
+    <img id="hamburger" class="hamburger mobile-nav" src="./images/icon-hamburger.svg" alt="Menu Nav" />
+  </header>
+    <nav class="main-nav show-hide">
       <ul>
         <li><a href="#">How we work</a></li>
         <li><a href="#">Blog</a></li>
@@ -25,10 +27,9 @@
         <button><a href="#">View Plans</a></button>
       </ul>
     </nav>
-  </header>
   <main>
-    <section>
-      <img src="./images/image-intro-desktop.jpg" alt="" />
+    <img src="./images/image-intro-mobile.jpg" alt="Mobile Intro" />
+    <section class="intro">
       <h1>Humanizing your insurance.</h1>
 
       <p>Get your life insurance coverage easier and faster. We blend our expertise
@@ -37,39 +38,52 @@
 
       <button>View plans</button>
     </section>
-
     <h2>We’re different</h2>
+    
+    <section class="processes">
+      <img src="./images/icon-snappy-process.svg" alt="">
+      <h3>Snappy Process</h3>
 
-    <h3>Snappy Process</h3>
+      <p>Our application process can be completed in minutes, not hours. Don’t get
+        stuck filling in tedious forms.</p>
+    </section>
 
-    <p>Our application process can be completed in minutes, not hours. Don’t get
-      stuck filling in tedious forms.</p>
+    <section class="prices">
+      <img src="./images/icon-affordable-prices.svg" alt="">
+      <h3>Affordable Prices</h3>
 
-    <h3>Affordable Prices</h3>
+      <p>We don’t want you worrying about high monthly costs. Our prices may be low,
+        but we still offer the best coverage possible.</p>
+    </section>
 
-    <p>We don’t want you worrying about high monthly costs. Our prices may be low,
-      but we still offer the best coverage possible.</p>
+    <section class="people-first">
+      <img src="./images/icon-people-first.svg" alt="">
+      <h3>People First</h3>
 
-    <h3>People First</h3>
+      <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make
+        sure you’re covered when you need it.</p>
+    </section>
 
-    <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make
-      sure you’re covered when you need it.</p>
+    <section class="how-we-work">
+      <h2>Find out more about how we work</h2>
+      <button>How we work</button>
+    </section>
 
-    <h4>Find out more about how we work</h4>
-
-    <button>How we work</button>
   </main>
 
-  <footer>
-    <!-- <img src="./images/bg-pattern-intro-left-mobile.svg" alt=""> -->
-    <div class="social">
+  <div class="social">
+    <div class="social-logo">
       <img src="./images/logo.svg" alt="Insure Logo">
-      <img src="./images/icon-facebook.svg" alt="">
-      <img src="./images/icon-twitter.svg" alt="">
-      <img src="./images/icon-pinterest.svg" alt="">
-      <img src="./images/icon-instagram.svg" alt="">
     </div>
-
+    <div class="social-icons">
+      <img src="./images/icon-facebook.svg" alt="facebook">
+      <img src="./images/icon-twitter.svg" alt="twitter">
+      <img src="./images/icon-pinterest.svg" alt="pinterest">
+      <img src="./images/icon-instagram.svg" alt="isntagram">
+    </div>
+  </div>
+  
+  <footer>
     <hr>
     <h4>Our company</h4>
     <ul>
@@ -106,6 +120,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://cgweb.co.uk" target="_blank">Chloe</a>.
   </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
