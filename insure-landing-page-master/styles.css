@@ -18,11 +18,16 @@ body {
   max-width: 375px;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
+} */
+
+header img {
+  display: inline-block;
 }
+
 
 h1,
 h2,
@@ -51,7 +56,7 @@ nav {
 }
 
 .show-hide {
-  display: none;
+  display: block;
 }
 
 nav ul,
@@ -102,6 +107,8 @@ button {
   padding: 2rem 1rem;
 }
 
+.main-nav button, 
+.intro button, 
 .how-we-work button {
   background: transparent;
   border: 1px solid white;
@@ -130,7 +137,23 @@ footer {
 /* DESKTOP STYLES */
 
 @media (min-width:900px){
-  .show-hide {
-    display: block;
+  body {
+    max-width: 1440px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    background-color: #ffffff;
+  }
+
+  nav a {
+    color: hsl(256, 26%, 20%);
+  }
+
+  .main-nav button {
+    border: 1px solid hsl(256, 26%, 20%);
   }
 }
