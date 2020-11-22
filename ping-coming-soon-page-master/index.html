@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <script src="https://kit.fontawesome.com/a1ce54184a.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">  
+  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { color: hsl(0, 0%, 59%); font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      background-color: #f1f1f1;
+      font-size: 20px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 400;
+      margin: 0 auto;
+      max-width: 375px;
+      text-align: center;
+    }
+
+    h1 {
+      color: hsl(0, 0%, 59%);
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .soon {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .subscribe {
+      font-size: 14px;
+      padding-bottom: 1.5rem;
+    }
+
+    .img-fluid {
+      height: auto;
+      margin: auto;
+      max-width: 350px;
+    }
+
+    .logo {
+      padding: 1.5rem 0;
+      transform: scale(0.5);
+    }
+
+    #email, 
+    button {
+      border-radius: 1rem;
+      color: #ffffff;
+      padding: 0.5rem 0;
+      margin: 0.25rem auto;
+    }
+    
+    #email {
+      background-color: #f1f1f1;
+      border: 1px solid hsl(223, 100%, 88%);
+      color: hsl(0, 0%, 59%);
+      padding-left: 1rem;
+      width: 250px;
+    }
+    
+    button {
+      background-color: hsl(223, 87%, 63%);
+      border: 1px solid  hsl(223, 87%, 63%);
+      width: 270px;
+    }
+
+    .social ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .social li {
+      border: 1px solid hsl(223, 87%, 63%);
+      border-radius: 50%;
+      color: hsl(223, 87%, 63%);
+      padding: 0.25rem 0.5rem;
+    }
+
+    a:link,
+    a:visited {
+      color: hsl(223, 87%, 63%);
+    }
+
+    .dashboard-image {
+      padding: 2rem 0;
+    }
+
+    .copyright {
+      color: hsl(0, 0%, 59%);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    #error {
+      color: #CC0000;
+      font-size: 12px;
+    }
+
+    @media(min-width: 768px){
+      main {
+        /* flex-direction: row; */
+        max-width: 1440px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        padding-bottom: 0;
+      }
+
+      .intro p {
+        font-size: 1rem;
+        padding-bottom: 0;
+      }
+
+      .email {
+        align-self: center;
+        display: grid;
+        grid-template-areas:
+        "input input button"
+        "error error ."
+      }
+
+      .email input {
+        grid-area: input;
+      }
+
+      #email {
+        margin-right: 0.5rem;
+        width: 350px;
+      }
+
+      .email button {
+        font-size: 14px;
+        font-weight: 600;
+        grid-area: button;
+        width: 10rem;
+      }
+      
+      .email button:hover {
+        background-color: hsla(223, 87%, 63%, 0.5);
+        border: 1px solid hsla(223, 87%, 63%, 0.5);
+        cursor: pointer;
+      }
+
+      .email #error {
+        grid-area: error;
+      }
+
+      .dashboard-image img {
+        max-width: 55%;
+      }
+
+      .social ul {
+        justify-content: center;
+      }
+
+      .social li {
+        margin-right: 0.5rem;
+      }
+      
+      .social li:hover {
+        background-color: hsl(223, 87%, 63%);
+        color: #f1f1f1;
+        cursor: pointer;
+      } 
+
+      .social a:hover {
+        color: #f1f1f1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <img class="img-fluid logo" src="images/logo.svg" alt="PING logo" width="150">
+    </section>
+
+    <section class="intro">
+      <h1>We are launching <span class="soon">soon!</span></h1>
+      <p class="subscribe">Subscribe and get notified</p>
+    </section>
+
+    <section class="email">
+      <input aria-label="emailaddress" type="email" name="email" id="email" placeholder="Enter your email address" required>
+      <div id="error"></div>
+      <button type="button" class="notify" title="Notify Me Button">Notify Me</button>
+    </section>
+
+    <section class="dashboard-image">
+      <img class="img-fluid" src="images/illustration-dashboard.png" alt="illustration-dashboard" >
+    </section>
+
+    <section class="social">
+      <ul>
+        <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </section>
+
+  <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/cguttweb">Chloe</a>.
+    </p>
+  </footer>
+</main>
+<script>
+  const error = document.getElementById('error')
+  const getEmail = document.getElementById('email').value
+
+  const input = document.querySelector('input')
+  
+
+  function validEmail(email){
+    const emailRegex =  /^([a-zA-Z0-9_\-.+])+@([a-zA-Z0-9_\.])+\.([A-Za-z]{2,})\$/;
+    return emailRegex.test(email)
+  }
+
+
+  const subscribeBtn = document.querySelector('.notify')
+
+  subscribeBtn.addEventListener('click', () => {
+    if(getEmail === '' || getEmail === undefined){
+      error.textContent = `Please add an email address`
+      error.style.padding = `0.5rem`
+      input.style.border = `1px solid red`
+      }
+  })
+</script>
+</body>
+</html>
