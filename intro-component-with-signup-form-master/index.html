@@ -25,11 +25,12 @@
 
     body {
       background-color: hsl(0, 100%, 74%);
+      background-image:url('./images/bg-intro-mobile.png');
       color: #ffffff;
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
       text-align: center;
-      /* max-width: 375px; */
+      max-width: 375px;
     }
 
     form {
@@ -38,9 +39,9 @@
       padding-top: 1rem;
     }
 
-    input,
-    .claim {
-      /* border-radius: 0.25rem; */
+    .claim, 
+    input {
+      border-radius: 0.25rem;
       border: 1px solid lightgrey;
       display: block;
       padding: 0.5rem;
@@ -50,7 +51,6 @@
     }
 
     button {
-      border: none;
       border-radius: 0.25rem;
       cursor: pointer;
       font-size: 0.9rem;
@@ -72,11 +72,9 @@
 
     .claim {
       background-color: hsl(154, 59%, 51%);
+      border: 1px solid hsl(154, 59%, 51%);
       color: #ffffff;
-      /* margin-top: 0.5rem; */
-      /* padding: 0.75rem 0; */
       text-transform: uppercase;
-      /* width: 80%; */
     }
 
     .terms {
@@ -90,46 +88,68 @@
       font-weight: bold;
     }
 
-    @media(min-width: 900px) {
+    @media(min-width: 768px) {
       body {
+        background-image:url('./images/bg-intro-desktop.png');
+        background-size: cover;
         font-size: 1rem;
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 1000px;
       }
 
       main {
         display: grid;
-        grid-template-areas:
-          ". . ."
-          "headline try-button ."
-          "intro form ."
-          "footer footer footer";
+        grid-template-areas: 
+        ". . ."
+        "info info form"
+        ". . ."
+        "footer footer footer"
+      }
+
+      .info {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        grid-area: info;
+        padding-right: 2rem;
+        text-align: left;
       }
 
       h1 {
-        grid-area: headline;
+        font-size: 36px;
       }
 
-      .intro {
-        grid-area: intro
+      .form-section {
+        grid-area: form;
+        width: 600px;
       }
 
       .try {
-        grid-area: try-button
+        box-shadow: 2px 2px 3px rgba(36, 35, 49, 0.5);
+        grid-row: 2/3;
+        margin-top: 5rem;
       }
 
-      form {
-        grid-area: form;
-        margin-bottom: 5rem;
+
+      input:focus {
+        border: 1px solid grey;
       }
 
-      input {
-        width: 80%;
+      .claim {
+        width: 85%;
+      }
+
+      div[id$='error'] {
+        color: #CC0000;
+        font-size: 10px;
+        font-style: italic;
+        padding-top: 0.5rem;
+        text-align: right;
+        width: 90%;
       }
 
       footer {
         grid-area: footer;
-        text-align: center;
       }
     }
   </style>
@@ -137,38 +157,64 @@
 
 <body>
   <main>
-    <h1>Learn to code by watching others</h1>
+    <section class="info">
+      <h1>Learn to code by watching others</h1>
+      <p class="intro">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </section>
 
-    <p class="intro">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-      but understanding how developers think is invaluable.</p>
+    <div class="form-section">
+      <button type="button" class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+      <form>
+        <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-label="firstname" aria-required="true" title="firstname">
+        <div id="firstnameerror"></div>
+        <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-label="lastname" aria-required="true" title="lastname">
+        <div id="lastnameerror"></div>
+        <input type="email" name="email" id="email" placeholder="Email Address" aria-lavel="email" aria-required="true" title="email">
+        <div id="emailerror"></div>
+        <input type="text" name="password" id="password" placeholder="Password" aria-label="password" aria-required="true" title="password">
+        <div id="passworderror"></div>
+  
+        <button type="button" class="claim">Claim your free trial</button>
+        <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+      </form>
 
-    <button class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+    </div>
 
-    <form action="#">
-
-      <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-required="true"
-        title="firstname">
-      <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-required="true" title="lastname">
-      <input type="email" name="email" id="email" placeholder="Email Address" aria-required="true" title="email">
-      <input type="text" name="password" id="password" placeholder="Password" aria-required="true" title="password">
-
-      <button type="button" class="claim">Claim your free trial</button>
-
-      <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
-    </form>
-
-    <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://dev.to/cguttweb" target="_blank">Chloe</a>.
-      </p>
-    </footer>
+      <footer>
+        <div>
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/cguttweb" target="_blank">Chloe</a>.
+          </p>
+        </div>
+      </footer>
   </main>
 
   <script>
-    const submit = document.querySelector('.claim');
-    submit.addEventListener('click', () => {
+    const firstName = document.querySelector('#firstname').value
+    const lastName = document.querySelector('#lastname').value
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
 
+    const submit = document.querySelector('.claim');
+
+
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+      if(firstName === '' || firstName === undefined){
+        firstnameerror.textContent = `First Name cannot be empty`
+      }
+
+      if(lastName === '' || lastName === undefined){
+        lastnameerror.textContent = `Last name cannot be empty`
+      }
+      if(email === '' || email === undefined){
+        emailerror.textContent = `Please add an email address`
+      }
+
+      if(password === '' || password === undefined){
+        passworderror.textContent = `Password cannot be empty`
+      }
     })
   </script>
 </body>
