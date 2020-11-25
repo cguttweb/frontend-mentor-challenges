@@ -16,8 +16,10 @@
 
 <body>
   <header>
-    <img src="./images/logo.svg" alt="Insure Logo">
-    <img id="hamburger" class="hamburger mobile-nav" src="./images/icon-hamburger.svg" alt="Menu Nav" />
+    <div class="header-images">
+      <img src="./images/logo.svg" alt="Insure Logo">
+      <img id="hamburger" class="hamburger mobile-nav" src="./images/icon-hamburger.svg" alt="Menu Nav" />
+    </div>
     
     <nav class="main-nav show-hide">
       <ul>
@@ -30,8 +32,8 @@
   </header>
     
   <main>
-    <img src="./images/image-intro-mobile.jpg" alt="Mobile Intro" />
     <section class="intro">
+      <img src="./images/image-intro-mobile.jpg" alt="Mobile Intro" />
       <h1>Humanizing your insurance.</h1>
 
       <p>Get your life insurance coverage easier and faster. We blend our expertise
@@ -40,8 +42,12 @@
 
       <button>View plans</button>
     </section>
-    <h2>We’re different</h2>
+
+    <section>
+      <h2>We’re different</h2>
+    </section>
     
+  <div class="three-col">
     <section class="processes">
       <img src="./images/icon-snappy-process.svg" alt="">
       <h3>Snappy Process</h3>
@@ -65,6 +71,7 @@
       <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make
         sure you’re covered when you need it.</p>
     </section>
+  </div>
 
     <section class="how-we-work">
       <h2>Find out more about how we work</h2>
@@ -81,7 +88,7 @@
       <img src="./images/icon-facebook.svg" alt="facebook">
       <img src="./images/icon-twitter.svg" alt="twitter">
       <img src="./images/icon-pinterest.svg" alt="pinterest">
-      <img src="./images/icon-instagram.svg" alt="isntagram">
+      <img src="./images/icon-instagram.svg" alt="instagram">
     </div>
   </div>
   
@@ -131,7 +138,15 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://cgweb.co.uk" target="_blank">Chloe</a>.
   </div>
-  <script src="main.js"></script>
+  <script>
+    const hamburgerIcon = document.getElementById('hamburger');
+    const mainNav = document.querySelector('.main-nav');
+
+  // toggle class to show/hide mobile navigation
+    hamburgerIcon.addEventListener('click', () => {
+      mainNav.classList.toggle('show-hide');
+    })
+  </script>
 </body>
 
 </html>

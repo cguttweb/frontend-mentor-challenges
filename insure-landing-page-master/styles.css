@@ -18,8 +18,10 @@ body {
   max-width: 375px;
 }
 
-header img {
-  display: inline-block;
+.header-images {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 h1,
@@ -88,6 +90,9 @@ footer h4 {
 
 .intro {
   background-color: hsl(256, 26%, 20%);
+  background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
+  /* background-position: bottom right; */
   color: #ffffff;
   padding: 4rem 1rem;
 }
@@ -131,7 +136,7 @@ footer {
 
 /* DESKTOP STYLES */
 
-@media (min-width:900px){
+@media (min-width:768px){
   body {
     max-width: 1440px;
   }
@@ -139,6 +144,7 @@ footer {
   .hamburger {
     display: none;
   }
+
 
   /* NAVIGATION STYLES */
 
@@ -157,6 +163,7 @@ footer {
 
   nav a {
     color: hsl(256, 26%, 20%);
+    justify-content: space-between;
   }
 
   .main-nav button {
@@ -166,9 +173,32 @@ footer {
 
   /* MAIN BODY STYLES */
 
-  .how-we-work {
+  main {
+    margin: 0 auto;
+    width: 900px;
+  }
+
+  .intro {
+    display: grid;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  .three-col {
     display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+
+  .how-we-work {
+    align-items: center;
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 900px;
   }
 
   /* FOOTER AND SOCIAL STYLES */
@@ -176,7 +206,7 @@ footer {
   .social, 
   footer {
     background-image: url(./images/bg-pattern-footer-desktop.svg);
-    background-position: left top;
+    background-position: right top;
     background-repeat: no-repeat;
     background-size: contain;
   }
