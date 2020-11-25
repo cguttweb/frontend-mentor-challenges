@@ -25,7 +25,7 @@
 
     body {
       background-color: hsl(0, 100%, 74%);
-      background-image:url('./images/bg-intro-mobile.png');
+      background-image: url('./images/bg-intro-mobile.png');
       color: #ffffff;
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
@@ -39,7 +39,7 @@
       padding-top: 1rem;
     }
 
-    .claim, 
+    .claim,
     input {
       border-radius: 0.25rem;
       border: 1px solid lightgrey;
@@ -48,6 +48,13 @@
       margin: auto;
       margin-top: 0.5rem;
       width: 80%;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      background-repeat: no-repeat;
+      background-position: right;
+      background-image: none;
     }
 
     button {
@@ -90,7 +97,7 @@
 
     @media(min-width: 768px) {
       body {
-        background-image:url('./images/bg-intro-desktop.png');
+        background-image: url('./images/bg-intro-desktop.png');
         background-size: cover;
         font-size: 1rem;
         margin: 0 auto;
@@ -99,11 +106,10 @@
 
       main {
         display: grid;
-        grid-template-areas: 
-        ". . ."
-        "info info form"
-        ". . ."
-        "footer footer footer"
+        grid-template-areas:
+          ". . ."
+          "info info form"
+          "footer footer footer"
       }
 
       .info {
@@ -111,17 +117,18 @@
         display: flex;
         flex-direction: column;
         grid-area: info;
-        padding-right: 2rem;
+        padding: 0 2rem;
         text-align: left;
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 3rem;
+        line-height: 3.4rem;
       }
 
       .form-section {
         grid-area: form;
-        width: 600px;
+        width: 400px;
       }
 
       .try {
@@ -130,13 +137,18 @@
         margin-top: 5rem;
       }
 
-
-      input:focus {
-        border: 1px solid grey;
+      input {
+        height: 30px;
+        padding: 0.5rem;
       }
 
       .claim {
-        width: 85%;
+        height: 50px;
+        width: 340px;
+      }
+
+      input:focus {
+        border: 1px solid grey;
       }
 
       div[id$='error'] {
@@ -159,35 +171,40 @@
   <main>
     <section class="info">
       <h1>Learn to code by watching others</h1>
-      <p class="intro">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+      <p class="intro">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
     </section>
 
     <div class="form-section">
       <button type="button" class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
       <form>
-        <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-label="firstname" aria-required="true" title="firstname">
+        <input type="text" name="firstName" id="firstname" placeholder="First Name" aria-label="firstname"
+          aria-required="true" title="firstname">
         <div id="firstnameerror"></div>
-        <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-label="lastname" aria-required="true" title="lastname">
+        <input type="text" name="lastName" id="lastname" placeholder="Last Name" aria-label="lastname"
+          aria-required="true" title="lastname">
         <div id="lastnameerror"></div>
-        <input type="email" name="email" id="email" placeholder="Email Address" aria-lavel="email" aria-required="true" title="email">
+        <input type="email" name="email" id="email" placeholder="Email Address" aria-lavel="email" aria-required="true"
+          title="email">
         <div id="emailerror"></div>
-        <input type="text" name="password" id="password" placeholder="Password" aria-label="password" aria-required="true" title="password">
+        <input type="text" name="password" id="password" placeholder="Password" aria-label="password"
+          aria-required="true" title="password">
         <div id="passworderror"></div>
-  
-        <button type="button" class="claim">Claim your free trial</button>
+
+        <button class="claim">Claim your free trial</button>
         <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
       </form>
 
     </div>
 
-      <footer>
-        <div>
-          <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="https://github.com/cguttweb" target="_blank">Chloe</a>.
-          </p>
-        </div>
-      </footer>
+    <footer>
+      <div>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/cguttweb" target="_blank">Chloe</a>.
+        </p>
+      </div>
+    </footer>
   </main>
 
   <script>
@@ -198,24 +215,28 @@
 
     const submit = document.querySelector('.claim');
 
+    let inputs = document.querySelectorAll('input')
 
     submit.addEventListener('click', (e) => {
       e.preventDefault();
-      if(firstName === '' || firstName === undefined){
+      inputs.forEach(item => {
+        item.style.backgroundImage = "url('./images/icon-error.svg')";
+      })
+      if (firstName === '' || firstName === undefined) {
         firstnameerror.textContent = `First Name cannot be empty`
       }
 
-      if(lastName === '' || lastName === undefined){
+      if (lastName === '' || lastName === undefined) {
         lastnameerror.textContent = `Last name cannot be empty`
       }
-      if(email === '' || email === undefined){
+      if (email === '' || email === undefined) {
         emailerror.textContent = `Please add an email address`
       }
 
-      if(password === '' || password === undefined){
+      if (password === '' || password === undefined) {
         passworderror.textContent = `Password cannot be empty`
       }
-    })
+    });
   </script>
 </body>
 
