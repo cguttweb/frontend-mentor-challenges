@@ -1,0 +1,75 @@
+:root {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size:18px;
+}
+
+body {
+  background:hsl(185, 75%, 39%);
+  background-image: url(./images/bg-pattern-top.svg),
+  url(./images/bg-pattern-bottom.svg);
+  background-position: center left;
+  background-repeat: no-repeat no-repeat;
+  background-size: 400px 200px 100px 200px;
+  margin: 0 auto;
+  max-width: 375px;
+  text-align: center;
+}
+
+.card {
+  background-color: #ffffff;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 4rem auto;
+  max-width: 350px;
+  padding-bottom: 1rem;
+}
+
+.card img {
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+  margin-top: 25%;
+}
+
+.info span {
+  font-weight: 700;
+}
+
+
+.info p:nth-child(2) {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.8rem;
+}
+
+hr {
+  border: 1px solid hsla(0, 0%, 59%, 0.5);
+  width: 90%;
+}
+
+.social {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.social strong {
+  font-size: 20px;
+}
+
+.social span {
+  color: hsl(0, 0%, 59%);
+}
+
+@media(min-width: 768px){
+  body {
+    /* background-image: url(./images/bg-pattern-top.svg); */
+    /* background-position: left center; */
+    margin: auto;
+    max-width: 1440px;
+  }
+
+
+}
