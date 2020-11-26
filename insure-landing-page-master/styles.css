@@ -88,6 +88,10 @@ footer h4 {
 
 /* MAIN BODY STYLES */
 
+.mob-hide {
+  display: none;
+}
+
 .intro {
   background-color: hsl(256, 26%, 20%);
   background-image: url(./images/bg-pattern-intro-left-mobile.svg);
@@ -136,60 +140,87 @@ footer {
 
 /* DESKTOP STYLES */
 
-@media (min-width:768px){
+@media (min-width:900px){
   body {
     max-width: 1440px;
   }
 
-  .hamburger {
+  .mob-hide {
+    display: block;
+  }
+
+  .hamburger,
+  .desktop-hide {
     display: none;
   }
 
-
   /* NAVIGATION STYLES */
+
+  header {
+    background-color: #fff;
+  }
 
   header,
   .main-nav ul {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .main-nav {
     background-color: #ffffff;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
   }
 
-  nav a {
+  nav li a {
     color: hsl(256, 26%, 20%);
-    justify-content: space-between;
+    padding-right: 1rem;
   }
-
+  
   .main-nav button {
     border: 1px solid hsl(256, 26%, 20%);
-    margin-left: 1rem;
+  }
+
+  .main-nav button a {
+    color: hsl(256, 26%, 20%);
   }
 
   /* MAIN BODY STYLES */
 
   main {
     margin: 0 auto;
-    width: 900px;
   }
 
   .intro {
-    display: grid;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 10rem;
   }
 
-  h2 {
+  .intro img {
+    max-width: 400px;
+    position: absolute;
+    right: 25%;
+    top: 150px;
+  }
+
+  .content {
+    position: relative;
+    right: 60%;
+    text-align: left;
+    width: 25%;
+  }
+
+  .three-col-heading { 
+    margin: auto;
+    max-width: 900px;
     text-align: left;
   }
-
+  
   .three-col {
     display: flex;
     margin: 0 auto;
     padding: 4rem 0;
+    max-width: 900px;
   }
 
   .how-we-work {
@@ -197,8 +228,8 @@ footer {
     background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
-    width: 900px;
+    margin: 0 auto 6rem;
+    max-width: 900px;
   }
 
   /* FOOTER AND SOCIAL STYLES */
