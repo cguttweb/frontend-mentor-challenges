@@ -1,0 +1,70 @@
+:root {
+  background-color: hsl(0, 0%, 81%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+  main {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: 
+    "boxone boxone boxtwo boxthree"
+    "boxfive boxfour boxfour boxthree"
+  }
+
+  [class^="box"] {
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  [class^="box"] img {
+    border-radius: 50%;
+    float: left;
+    padding-right: 1rem;
+  }
+
+  .box1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    grid-area: boxone;
+  }
+
+  .box2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+    grid-area: boxtwo;
+  }
+
+  .box3 {
+    grid-area: boxthree;
+  }
+
+  .box3, 
+  .box5 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%)
+  }
+
+  .box4 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    grid-area: boxfour;
+  }
+
+  .box {
+    grid-area: boxfive;
+  }
+
+  h2, h3 {
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width:480px){
+    main {
+      display: block;
+    }
+  }

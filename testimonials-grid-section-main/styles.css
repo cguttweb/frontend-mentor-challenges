@@ -1,0 +1,56 @@
+:root {
+  background-color: #cfcfcf;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px; }
+
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "boxone boxone boxtwo boxthree" "boxfive boxfour boxfour boxthree"; }
+
+[class^="box"] {
+  border-radius: 1rem;
+  padding: 2rem; }
+
+[class^="box"] img {
+  border-radius: 50%;
+  float: left;
+  padding-right: 1rem; }
+
+.box1 {
+  background-color: #7541c8;
+  color: white;
+  grid-area: boxone; }
+
+.box2 {
+  background-color: #48556a;
+  color: white;
+  grid-area: boxtwo; }
+
+.box3 {
+  grid-area: boxthree; }
+
+.box3,
+.box5 {
+  background-color: white;
+  color: #19212e; }
+
+.box4 {
+  background-color: #19212e;
+  color: white;
+  grid-area: boxfour; }
+
+.box {
+  grid-area: boxfive; }
+
+h2, h3 {
+  margin: 0; }
+
+h4 {
+  font-size: 1.5rem; }
+
+@media (max-width: 480px) {
+  main {
+    display: block; } }
+
+/*# sourceMappingURL=styles.css.map */
