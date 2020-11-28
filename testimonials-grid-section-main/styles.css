@@ -1,16 +1,18 @@
 :root {
-  background-color: #cfcfcf;
+  background-color: #ecf2f8;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 13px; }
+  font-size: 14px; }
 
 main {
+  margin: 0 auto;
+  max-width: 1440px;
   display: grid;
   gap: 2rem;
   grid-template-areas: "boxone boxone boxtwo boxthree" "boxfive boxfour boxfour boxthree"; }
 
 [class^="box"] {
   border-radius: 1rem;
-  padding: 2rem; }
+  padding: 1.5rem 2.5rem; }
 
 [class^="box"] img {
   border-radius: 50%;
@@ -19,6 +21,9 @@ main {
 
 .box1 {
   background-color: #7541c8;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
   color: white;
   grid-area: boxone; }
 
@@ -28,7 +33,8 @@ main {
   grid-area: boxtwo; }
 
 .box3 {
-  grid-area: boxthree; }
+  grid-area: boxthree;
+  max-width: 250px; }
 
 .box3,
 .box5 {
@@ -46,11 +52,21 @@ main {
 h2, h3 {
   margin: 0; }
 
+h2 {
+  font-size: 1.25rem; }
+
+h3 {
+  color: #cfcfcf;
+  font-size: 1rem; }
+
 h4 {
   font-size: 1.5rem; }
 
 @media (max-width: 480px) {
   main {
-    display: block; } }
+    display: block; }
+
+  [class^="box"] {
+    margin: 1rem 0; } }
 
 /*# sourceMappingURL=styles.css.map */

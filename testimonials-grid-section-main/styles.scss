@@ -1,10 +1,12 @@
 :root {
-  background-color: hsl(0, 0%, 81%);
+  background-color: hsl(210, 46%, 95%);
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
   main {
+    margin: 0 auto;
+    max-width: 1440px;
     display: grid;
     gap: 2rem;
     grid-template-areas: 
@@ -14,7 +16,7 @@
 
   [class^="box"] {
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem 2.5rem;
   }
 
   [class^="box"] img {
@@ -25,6 +27,9 @@
 
   .box1 {
     background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 10%;
     color: hsl(0, 0%, 100%);
     grid-area: boxone;
   }
@@ -37,6 +42,7 @@
 
   .box3 {
     grid-area: boxthree;
+    max-width: 250px;
   }
 
   .box3, 
@@ -59,6 +65,15 @@
     margin: 0;
   }
 
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    color: hsl(0, 0%, 81%);
+    font-size: 1rem;
+  }
+
   h4 {
     font-size: 1.5rem;
   }
@@ -66,5 +81,9 @@
   @media (max-width:480px){
     main {
       display: block;
+    }
+
+    [class^="box"] {
+      margin: 1rem 0;
     }
   }
