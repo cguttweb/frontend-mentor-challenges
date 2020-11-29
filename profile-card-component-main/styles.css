@@ -5,14 +5,23 @@
 
 body {
   background:hsl(185, 75%, 39%);
-  background-image: url(./images/bg-pattern-top.svg),
-  url(./images/bg-pattern-bottom.svg);
-  background-position: center left;
-  background-repeat: no-repeat no-repeat;
-  background-size: 400px 200px 100px 200px;
   margin: 0 auto;
   max-width: 375px;
   text-align: center;
+}
+
+.img-1 {
+  position: absolute;
+  left: -5%;
+  top: -55%;
+  z-index: -1;
+}
+
+.img-2 {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  z-index: -1;
 }
 
 .card {
@@ -22,9 +31,10 @@ body {
   background-position: top;
   border: 1px solid transparent;
   border-radius: 5px;
-  margin: 4rem auto;
+  margin: 6rem auto;
   max-width: 350px;
   padding-bottom: 1rem;
+  z-index: 5;
 }
 
 .card img {
@@ -65,8 +75,6 @@ hr {
 
 @media(min-width: 768px){
   body {
-    /* background-image: url(./images/bg-pattern-top.svg); */
-    /* background-position: left center; */
     margin: auto;
     max-width: 1440px;
   }
