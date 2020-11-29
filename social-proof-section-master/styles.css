@@ -1,0 +1,36 @@
+:root {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+
+}
+
+body {
+  max-width: 375px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: hsl(300, 43%, 22%);
+  text-align: center;
+}
+
+h3, h4 {
+  margin: 0;
+}
+
+section img {
+  border-radius: 50%;
+  float: left;
+  max-width: 3rem;
+  padding-right: 1rem;
+}
+
+.review {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 1rem;
+  color: hsl(0, 0%, 100%);
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+}
