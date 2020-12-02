@@ -9,6 +9,12 @@ body {
   text-align: center;
 }
 
+.pattern-mob-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 h1,
 h2 {
   color: hsl(300, 43%, 22%);
@@ -17,7 +23,7 @@ h2 {
 
 h1 {
   font-size: 2rem;
-  padding: 0 1rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
 h1 + p {
@@ -26,6 +32,10 @@ h1 + p {
 
 h3, h4 {
   margin: 0;
+}
+
+h4 {
+  color: hsl(333, 80%, 67%);
 }
 
 section img {
@@ -72,5 +82,35 @@ section img {
   body {
     margin: 0 auto;
     max-width: 1440px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+  }
+
+  .pattern-mob-top {
+    display: none;
+  }
+
+  .pattern-top {
+    position: absolute;
+    /* left: 0; */
+    top: 0;
+  }
+
+  .intro {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: left;
+  }
+
+  .intro h1 {
+    text-align: left;
+  }
+
+  .rating {
+    background-position: 46% top, 48% top, 50% top, 52% top, 54% top;
   }
 }
