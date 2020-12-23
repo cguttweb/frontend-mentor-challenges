@@ -86,8 +86,13 @@ section img {
 
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas: 
+    "intro intro ratings"
+    "intro intro ratings"
+    "reviews reviews reviews"
+    "footer footer footer";
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr auto; */
   }
 
   .pattern-mob-top {
@@ -101,8 +106,9 @@ section img {
   }
 
   .intro {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    /* grid-column: 1/2; */
+    /* grid-row: 1/2; */
+    grid-area: intro;
     text-align: left;
   }
 
@@ -112,5 +118,24 @@ section img {
 
   .rating {
     background-position: 46% top, 48% top, 50% top, 52% top, 54% top;
+    grid-area: rating;
+  }
+
+  .ratings {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews {
+    display: flex;
+    grid-area: reviews;
+  }
+
+  .review {
+    max-width: 33%;
+  }
+
+  .attribution {
+    grid-area: footer;
   }
 }
