@@ -1,6 +1,6 @@
 :root {
   font-family: 'Manrope', sans-serif;;
-  font-size: 15px;
+  font-size: 10px;
 --full-slider-bar: hsl(174, 77%, 80%);
 --slider-background: hsl(174, 86%, 45%);
 --light-grayish-red: hsl(14, 92%, 95%);
@@ -16,21 +16,35 @@
 
 main {
   background: var(--very-pale-blue);
+  background-image: url(./images/bg-pattern.svg);
   color: var(--dark-blue);
   display: flex;
+  font-size: 1.5rem;
   flex-direction: column;
   margin: 0 auto;
-  width: 375px;
+  max-width: 375px;
 }
 
 h1, 
-h2 {
+h2,
+p {
   text-align: center;
 }
 
 h2 {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.heading {
+  background-image: url(./images/pattern-circles.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+}
+
+.mob-show {
+  display: block;
 }
 
 .card {
@@ -42,15 +56,22 @@ h2 {
 .card .slider-icon {
   background: var(--slider-background);
   border-radius: 50%;
-  text-align: center;
+  /* text-align: center; */
   padding: 1rem;
+  z-index: 2;
 }
 
-input[type='range'] {
-  background-color: var(--full-slider-bar);
-  /* -webkit-appearance: none; */
-  /* background-image: -webkit-linear-gradient(top, var(--full-slider-bar), var(--full-slider-bar)); */
+#slider {
+  /* text-align: center; */
 }
+
+/* input[type='range'] { */
+  /* background-color: var(--full-slider-bar); */
+  /* background-image: url(./images/icon-slider.svg); */
+  /* background-repeat: no-repeat; */
+  /* -webkit-appearance: none; */
+/* background-image: -webkit-linear-gradient(top, var(--full-slider-bar), var(--full-slider-bar)); */
+/* } */
 
 .cost,
 .toggle-cost {
@@ -70,11 +91,12 @@ input[type='range'] {
   background: var(--light-grayish-red);
   border-radius: 1rem;
   color: var(--light-red);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .bullets {
   margin: 0 auto;
+  padding: 3rem 0;
   width: 70%;
 }
 
@@ -83,7 +105,7 @@ input[type='range'] {
   background-position-y: center;
   background-repeat: no-repeat;
   list-style-type: none;
-  padding-left: 1rem;
+  padding: 0.25rem 0 0 2rem;
 }
 
 /* button styles */
@@ -103,3 +125,30 @@ input[type='range'] {
 }
 
 /* DESKTOP STYLES */
+
+@media(min-width: 700px){
+  main {
+    /* background-image: url(./images/bg-pattern.svg); */
+    display: flex;
+    padding-bottom: 5rem;
+    max-width: 1440px;
+  }
+
+  .card {
+    /* display: flex; */
+    margin: auto;
+    width: 50%;
+  }
+
+  .button {
+    background-color: var(--light-red);
+  }
+  
+  .mob-show {
+    display: none;
+  }
+
+  .mob-hide {
+    display: block;
+  }
+}
