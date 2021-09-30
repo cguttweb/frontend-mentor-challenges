@@ -1,18 +1,21 @@
 :root {
   font-family: 'Spartan', sans-serif;
   font-size: 15px;
-
 }
 
 body {
+  margin: auto;
   max-width: 375px;
-  text-align: center;
 }
 
 .pattern-mob-top {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.pattern-top {
+  display: none;
 }
 
 h1,
@@ -38,29 +41,27 @@ h4 {
   color: hsl(333, 80%, 67%);
 }
 
-section img {
+p {
+  line-height: 1.7;
+}
+
+.intro p {
+  text-align: center;
+}
+
+/* section img {
   border-radius: 50%;
   float: left;
   max-width: 3rem;
   padding-right: 1rem;
-}
+} */
 
 .rating {
   background-color: hsl(300, 24%, 96%);
-  background-image: url(./images/icon-star.svg),
-  url(./images/icon-star.svg),
-  url(./images/icon-star.svg),
-  url(./images/icon-star.svg),
-  url(./images/icon-star.svg);
-  background-repeat: no-repeat, 
-  no-repeat,
-  no-repeat,
-  no-repeat,
-  no-repeat;
-  background-position: 120px top, 140px top, 160px top, 180px top, 200px top;
   border-radius: 0.5rem;
-  padding-top: 0.5rem;
-  margin: 1rem; 
+  padding-top: 1rem;
+  margin-top: 1rem;
+  text-align: center;
 }                  
 
 .rating h2 {
@@ -74,8 +75,16 @@ section img {
   border-radius: 0.5rem;
   color: hsl(0, 0%, 100%);
   margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   text-align: left;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media(min-width:768px){
@@ -90,9 +99,6 @@ section img {
     "intro intro ratings"
     "intro intro ratings"
     "reviews reviews reviews"
-    "footer footer footer";
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: 1fr 1fr auto; */
   }
 
   .pattern-mob-top {
@@ -101,34 +107,43 @@ section img {
 
   .pattern-top {
     position: absolute;
-    /* left: 0; */
     top: 0;
   }
 
   .intro {
-    /* grid-column: 1/2; */
-    /* grid-row: 1/2; */
     grid-area: intro;
     text-align: left;
   }
 
-  .intro h1 {
-    text-align: left;
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
   }
 
-  .rating {
-    background-position: 46% top, 48% top, 50% top, 52% top, 54% top;
-    grid-area: rating;
+  .intro h1,
+  .intro p {
+    margin: 0;
+    text-align: left;
   }
 
   .ratings {
     display: flex;
     flex-direction: column;
   }
+  
+  .rating {
+    display: flex;
+    grid-area: rating;
+  }
 
   .reviews {
     display: flex;
     grid-area: reviews;
+    padding-top: 3rem;
+  }
+
+  .reviews:last-child {
+    border: 3px solid orange;
   }
 
   .review {
@@ -136,6 +151,7 @@ section img {
   }
 
   .attribution {
-    grid-area: footer;
+    position: absolute;
+    bottom: 0;
   }
 }
