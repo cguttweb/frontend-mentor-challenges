@@ -50,4 +50,4 @@ Users should be able to:
 - Website - [https://www.cgweb.co.uk](https://www.cgweb.co.uk)
 - Github - [@cguttweb](https://github.com/cguttweb)
 - Frontend Mentor - [cguttweb](https://www.frontendmentor.io/profile/cguttweb)
-- Twitter - [@cguttweb](https://www.twitter.com/yourusername)
+- Twitter - [@cguttweb](https://www.twitter.com/cguttweb)
