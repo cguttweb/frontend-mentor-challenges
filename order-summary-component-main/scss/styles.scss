@@ -1,9 +1,15 @@
-@import 'base';
+body {
+  background-image: url('../images/pattern-background-mobile.svg');
+  background-repeat: repeat-x;
+  background-color: hsl(225, 100%, 94%);
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+}
 
 main {
-  background-color: var(--very-pale-blue);
+  background-color: hsl(225, 100%, 98%);
   border-radius: 0 0 1rem 1rem;
-  color: var(--desaturated-blue);
+  color: hsl(224, 23%, 55%);
   font-size: 1rem;
   margin: 4rem auto;
   padding-bottom: 2rem;
@@ -11,7 +17,7 @@ main {
 }
 
 h1 {
-  color: var(--dark-blue);
+  color: hsl(223, 47%, 23%);
 }
 
 .hero-image {
@@ -37,7 +43,7 @@ h1 {
 }
 
 button {
-  border: 1px solid var(--bright-blue);
+  border: 1px solid hsl(245, 75%, 52%);
   border-radius: 1rem;
   cursor: pointer;
   font-size: 1rem;
@@ -53,14 +59,14 @@ button {
 }
 
 button:nth-child(1) {
-  background-color: var(--bright-blue);
+  background-color: hsl(245, 75%, 52%);
   color: hsl(0, 0%, 100%);
 }
 
 button:nth-child(2) {
   background-color: transparent;
   border: 0;
-  color: var(--desaturated-blue);
+  color: hsl(224, 23%, 55%);
   margin-top: 0.5rem;
 }
 

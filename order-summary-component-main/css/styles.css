@@ -1,25 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
-:root {
-  --font: "Red Hat Display", sans-serif;
-  --pale-blue: hsl(225, 100%, 94%);
-  --bright-blue: hsl(245, 75%, 52%);
-  --very-pale-blue: hsl(225, 100%, 98%);
-  --desaturated-blue: hsl(224, 23%, 55%);
-  --dark-blue: hsl(223, 47%, 23%);
-  font-size: 16px;
-}
-
 body {
   background-image: url("../images/pattern-background-mobile.svg");
   background-repeat: repeat-x;
-  background-color: var(--pale-blue);
-  font-family: var(--font);
+  background-color: #e0e8ff;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
 }
 
 main {
-  background-color: var(--very-pale-blue);
+  background-color: #f5f7ff;
   border-radius: 0 0 1rem 1rem;
-  color: var(--desaturated-blue);
+  color: #7280a7;
   font-size: 1rem;
   margin: 4rem auto;
   padding-bottom: 2rem;
@@ -27,7 +17,7 @@ main {
 }
 
 h1 {
-  color: var(--dark-blue);
+  color: #1f2f56;
 }
 
 .hero-image {
@@ -53,7 +43,7 @@ h1 {
 }
 
 button {
-  border: 1px solid var(--bright-blue);
+  border: 1px solid #3829e0;
   border-radius: 1rem;
   cursor: pointer;
   font-size: 1rem;
@@ -69,14 +59,14 @@ button {
 }
 
 button:nth-child(1) {
-  background-color: var(--bright-blue);
+  background-color: #3829e0;
   color: white;
 }
 
 button:nth-child(2) {
   background-color: transparent;
   border: 0;
-  color: var(--desaturated-blue);
+  color: #7280a7;
   margin-top: 0.5rem;
 }
 
