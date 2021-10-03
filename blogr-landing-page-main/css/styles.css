@@ -56,6 +56,10 @@ nav {
   background-image: url(../images/bg-pattern-intro.svg);
 }
 
+.infrastructure {
+  background-color: #2c2d3f;
+}
+
 .main-footer {
   background-color: #25252d;
   border-radius: 0 2.5rem 0 0;
