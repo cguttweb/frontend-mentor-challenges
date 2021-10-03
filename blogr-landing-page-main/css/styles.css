@@ -4,8 +4,8 @@
 
 main {
   border: 1px solid red;
-  color: hsl(207, 13%, 34%);
-  font-family: 'Overpass', sans-serif;
+  color: #4b5862;
+  font-family: "Overpass", sans-serif;
   line-height: 2;
   margin: auto;
   max-width: 375px;
@@ -15,8 +15,8 @@ main {
 h1,
 h2,
 h3 {
-  color: hsl(208, 49%, 24%);
-  font-family: 'Ubuntu', sans-serif;
+  color: #1f3f5b;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.4;
   padding: 0 2rem;
 }
@@ -27,7 +27,6 @@ p {
 
 img {
   display: block;
-  // margin: auto;
   max-width: 375px;
 }
 
@@ -44,7 +43,7 @@ button {
 }
 
 nav {
-  background-color: hsl(13, 100%, 72%);
+  background-color: #ff8f70;
 }
 
 .mobile-nav {
@@ -57,12 +56,10 @@ nav {
   background-image: url(../images/bg-pattern-intro.svg);
 }
 
-// Footer styles
-
 .main-footer {
-  background-color: hsl(240, 10%, 16%);
+  background-color: #25252d;
   border-radius: 0 2.5rem 0 0;
-  color: hsl(0, 0%, 100%);
+  color: white;
   padding: 2rem 0;
   text-align: center;
 }
@@ -81,6 +78,9 @@ nav {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #3e52a3;
 }
+
+/*# sourceMappingURL=styles.css.map */

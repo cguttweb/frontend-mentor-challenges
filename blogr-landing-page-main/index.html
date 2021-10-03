@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | [Blogr]</title>
-
 </head>
 <body>
   <main>
     <nav class="top-nav">
-      <strong>Product</strong>
-    
+      <div class="mobile-nav">
+        <img src="./images/logo.svg" alt="">
+        <img src="./images/icon-hamburger.svg" alt="">
+      </div>
+      <strong>Product <img src="./images/icon-arrow-dark.svg"></strong>
       <ul>
         <li>Overview</li>
         <li>Pricing</li>
@@ -41,33 +46,47 @@
       <button>Login</button>
       <button>Sign Up</button>
     </nav>
+
+    <section class="intro">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+
+      <button>Start for Free</button>
+      <button>Learn More</button>
+    </section>
   
-    <h1>A modern publishing platform</h1>
-    <p>Grow your audience and build your online brand</p>
+    <section class="editor">
+      <h3>Designed for the future</h3>
+      
+      <img src="./images/illustration-editor-mobile.svg" alt="" srcset="">
+      <h2>Introducing an extensible editor</h2>
+      <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+    </section>
   
-    <button>Start for Free</button>
-    <button>Learn More</button>
+    <section class="management">
+      <h3>Robust content management</h3>
+      <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+    </section>
   
-    <h3>Designed for the future</h3>
+    <section class="infrastructure">
+      <img src="./images/illustration-phones.svg" alt="" srcset="">
+      <h3> State of the Art Infrastructure</h3>
+      <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+    </section>
   
-    <h2>Introducing an extensible editor</h2>
-    <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.
-    </p>
+    <section class="open">
+      <img src="./images/illustration-laptop-mobile.svg" alt="">
+      <h3>Free, open, simple</h3>
+      <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+    </section>
   
-    <h3>Robust content management</h3>
-    <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+    <section class="tooling">
+      <h3>Powerful tooling</h3>
+      <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+    </section>
   
-   <h3> State of the Art Infrastructure</h3>
-   <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
-  
-    <h3>Free, open, simple</h3>
-    <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-    </p>
-  
-   <h3>Powerful tooling</h3>
-    <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
-  
-    <footer>
+    <footer class="main-footer">
+      <img class="logo" src="./images/logo.svg" alt="blogr logo">
       <strong>Product</strong>
     
       <ul>
@@ -99,7 +118,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://cgweb.co.yj">Chloe</a>.
+    Coded by <a href="https://cgweb.co.uk">Chloe</a>.
   </div>
 </body>
 </html>
