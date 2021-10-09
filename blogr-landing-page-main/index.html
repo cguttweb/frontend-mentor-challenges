@@ -12,41 +12,40 @@
 </head>
 <body>
   <main>
-    <nav class="top-nav">
-      <div class="mobile-nav">
-        <img src="./images/logo.svg" alt="">
-        <img src="./images/icon-hamburger.svg" alt="">
-      </div>
-      <strong>Product</strong>
-      <ul>
-        <li>Overview</li>
-        <li>Pricing</li>
-        <li>Marketplace</li>
-        <li>Features</li>
-        <lis>Integrations</lis>
-      </ul>
-    
-      <strong>Company</strong>
-    
-      <ul>
-        <li>About</li>
-        <li>Team</li>
+    <div class="nav-intro">
+    <div class="mobile-nav">
+      <img class="logo" src="./images/logo.svg" alt="">
+      <img class="hamburger" src="./images/icon-hamburger.svg" alt="">
+    </div>
+      <nav class="top-nav">
+        <strong>Product</strong>
+        <ul id="product">
+          <li>Overview</li>
+          <li>Pricing</li>
+          <li>Marketplace</li>
+          <li>Features</li>
+          <lis>Integrations</lis>
+        </ul>
+        
+        <strong>Company</strong>
+        <ul id="company">
+          <li>About</li>
+          <li>Team</li>
         <li>Blog</li>
         <li>Careers</li>
       </ul>
     
       <strong>Connect</strong>
-    
-      <ul>
+      <ul id="connect">
         <li>Contact</li>
         <li>Newsletter</li>
         <li>LinkedIn</li>
       </ul>
-      
+      <hr style="width:90%">
       <button>Login</button>
       <button>Sign Up</button>
     </nav>
-
+    
     <section class="intro">
       <h1>A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
@@ -54,12 +53,13 @@
       <button>Start for Free</button>
       <button>Learn More</button>
     </section>
+  </div>
   
     <section class="editor">
-      <h3>Designed for the future</h3>
+      <h2>Designed for the future</h2>
       
       <img src="./images/illustration-editor-mobile.svg" alt="" srcset="">
-      <h2>Introducing an extensible editor</h2>
+      <h3>Introducing an extensible editor</h3>
       <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
     </section>
   
@@ -120,5 +120,13 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://cgweb.co.uk">Chloe</a>.
   </div>
+  <script>
+    const mobIcon = document.querySelector('.hamburger')
+    const topNav = document.querySelector('.top-nav')
+
+    mobIcon.addEventListener('click', () => {
+      
+    })
+  </script>
 </body>
 </html>

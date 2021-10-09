@@ -6,7 +6,6 @@ main {
   border: 1px solid red;
   color: hsl(207, 13%, 34%);
   font-family: 'Overpass', sans-serif;
-  line-height: 2;
   margin: auto;
   max-width: 375px;
   text-align: center;
@@ -17,21 +16,28 @@ h2,
 h3 {
   color: hsl(208, 49%, 24%);
   font-family: 'Ubuntu', sans-serif;
-  line-height: 1.4;
-  padding: 0 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
 }
 
 p {
+  line-height: 1.8;
   padding: 0 2rem;
 }
 
 img {
   display: block;
-  // margin: auto;
   max-width: 375px;
 }
 
 button {
+  border: 1px solid hsl(0, 0%, 100%);
   border-radius: 2rem;
   cursor: pointer;
   font-size: 1.1rem;
@@ -39,38 +45,118 @@ button {
   padding: 1rem;
 }
 
-.logo {
-  padding: 1rem 0;
+.nav-intro {
+  background-image: url(../images/bg-pattern-intro.svg);
 }
 
-nav {
+.mobile-nav,
+.top-nav,
+.intro {
   background-color: hsl(13, 100%, 72%);
+}
+
+.top-nav {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem 0;
+  // display: none;
+}
+
+.top-nav ul {
+  display: none;
+}
+
+.top-nav strong {
+  display: block;
+  padding-right: 1rem;
+}
+
+.top-nav strong::after {
+  content: '';
+  background-image: url(../images/icon-arrow-dark.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.top-nav button {
+  background: transparent;
+  display: block;
+  margin: auto;
+  width: 10rem;
+}
+
+.top-nav button:last-of-type {
+  background: hsl(13, 100%, 72%);
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  color: hsl(0, 0%, 100%);
 }
 
 .mobile-nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 // Main content styles
 
 .intro {
-  background-image: url(../images/bg-pattern-intro.svg);
+  border-radius: 0 0 0 6rem;
+  color: hsl(0, 0%, 100%);
+  padding: 4rem 0;
+}
+
+.intro h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+}
+
+.intro button {
+  background: hsl(0, 0%, 100%);
+  color: hsl(13, 100%, 72%);
+}
+
+.intro button:last-child {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
 }
 
 .infrastructure {
   background-color: hsl(237, 17%, 21%);
+  border-radius: 0 0 0 6rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 3rem;
+}
+
+.infrastructure h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.5rem;
+}
+
+.editor,
+.management,
+.open,
+.tooling {
+  padding-bottom: 3rem;
 }
 
 // Footer styles
 
 .main-footer {
   background-color: hsl(240, 10%, 16%);
-  border-radius: 0 2.5rem 0 0;
+  border-radius: 0 3rem 0 0;
   color: hsl(0, 0%, 100%);
-  padding: 2rem 0;
-  text-align: center;
+  padding: 3rem 0;
+}
+
+.main-footer img {
+  margin: auto;
+  padding-bottom: 1rem;
 }
 
 .top-nav ul,
@@ -87,6 +173,7 @@ nav {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
