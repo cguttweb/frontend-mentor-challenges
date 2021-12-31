@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --peach: hsl(6, 100%, 80%);
+  --bright-pink: hsl(335, 100%, 65%);
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-image: url(../../images/bg-mobile.png);
+  background-size: cover;
+}
+
+main {
+  margin: 4rem auto;
+  max-width: 375px;
+}
+
+section {
+  background-color: var(--dark-blue);
+  color: var(--pale-blue);
+}
+
+.images {
+  border-radius: 0 6rem 0 0;
+  padding: 2rem 3rem;
+}
+
+.images img {
+  padding: 1rem 0;
+}
+
+.icons img {
+  background-color: var(--very-dark-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.space {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+input {
+  // background-image: var(--bright-pink);
+  -webkit-appearance: none;
+  background-image: -webkit-linear-gradient(
+    right,
+    var(--bright-pink),
+    var(--peach)
+  );
+  border-radius: 1rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+.zero {
+  float: left;
+}
+
+.thousand {
+  float: right;
+}
+
+.left {
+  background-color: var(--pale-blue);
+  border-radius: 0.5rem;
+  color: var(--very-dark-blue);
+  font-size: 24px;
+  font-weight: 700;
+  left: 100px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  top: 30px;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    background-image: url(../../images/bg-desktop.png);
+  }
+}

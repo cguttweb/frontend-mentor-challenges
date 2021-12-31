@@ -155,7 +155,7 @@ button {
 }
 
 .main-footer img {
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 1rem;
 }
 
@@ -176,4 +176,22 @@ button {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 1440px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .main-footer {
+    display: flex;
+  }
+
+  .main-footer img {
+    margin-left: 1rem;
+  }
 }
