@@ -51,6 +51,10 @@ section {
   margin-bottom: 0;
 }
 
+.space p + span {
+  background-color: red;
+}
+
 input {
   -webkit-appearance: none;
   background-image: -webkit-linear-gradient(
@@ -59,6 +63,7 @@ input {
     var(--peach)
   );
   border-radius: 1rem;
+  width: 100%;
 }
 
 span {
@@ -99,7 +104,7 @@ span {
     background-position: bottom 50px right;
     background-repeat: no-repeat;
     // background-size: contain;
-    min-height: 85vh;
+    height: 95vh;
   }
 
   main {
@@ -111,20 +116,22 @@ span {
   .space {
     padding: 1rem;
     width: 40%;
+    text-align: left;
   }
-
-  // .space div {
-  //   width: 0;
-  //   height: 0;
-  //   border-left: 50px solid transparent;
-  //   border-right: 50px solid transparent;
-  //   border-top: 100px solid red;
-  // }
-
+  
   .left {
     font-size: 1rem;
     left: 280px;
-    top: -150px;
+    top: -165px;
     padding: 0.5rem;
   }
+  
+  .space .left {
+    // width: 0;
+    // height: 0;
+    // border-left: 50px solid transparent;
+    // border-right: 50px solid transparent;
+    // border-bottom: 5px solid red;
+  }
+
 }

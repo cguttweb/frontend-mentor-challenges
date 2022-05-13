@@ -3,12 +3,12 @@
 }
 
 main {
-  border: 1px solid red;
   color: hsl(207, 13%, 34%);
   font-family: 'Overpass', sans-serif;
   margin: auto;
   max-width: 375px;
   text-align: center;
+  width: 100%;
 }
 
 h1,
@@ -57,8 +57,8 @@ button {
 
 .top-nav {
   background-color: hsl(0, 0%, 100%);
+  display: none;
   padding: 1rem 0;
-  // display: none;
 }
 
 .top-nav ul {
