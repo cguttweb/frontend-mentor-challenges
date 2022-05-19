@@ -39,6 +39,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.cgweb.co.uk)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/cguttweb)
-- Twitter - [@yourusername](https://www.twitter.com/cguttweb)
+- Website - [Chloe](https://www.cgweb.co.uk)
+- Frontend Mentor - [@cguttweb](https://www.frontendmentor.io/profile/cguttweb)
+- Twitter - [@cguttweb](https://www.twitter.com/cguttweb)
