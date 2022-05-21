@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://frontend-mentor-challenges-rose.vercel.app/nft-preview-card-component-main/)
 
 ## My process
 

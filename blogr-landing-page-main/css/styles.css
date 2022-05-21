@@ -175,16 +175,35 @@ button {
     max-width: 1440px;
   }
 
-  .hamburger {
+  .hamburger,
+hr {
     display: none;
   }
 
-  .main-footer {
-    display: flex;
+  .mobile-nav {
+    float: left;
   }
 
-  .main-footer img {
-    margin-left: 1rem;
+  .top-nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .editor {
+    border: 1px solid pink;
+    display: grid;
+  }
+
+  .infrastructure {
+    border: 1px solid red;
+  }
+
+  .open {
+    border: 1px solid blue;
+  }
+
+  .tooling {
+    border: 1px solid green;
   }
 }
 
