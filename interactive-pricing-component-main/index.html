@@ -29,19 +29,20 @@
       <div id="slider">
         <input type="range" name="slide" id="slide" min="5" max="100" step="10" onchange="updateSlider(this.value)">
       </div>
+      <img class="slider-icon" src="./images/icon-slider.svg" alt="">
       
-      <!-- <img class="slider-icon" src="./images/icon-slider.svg" alt=""> -->
       
       <div class="cost"><span class="month-cost"> </span> / month</div>
 
-      <div class="toggle-cost">
-      Monthly Billing
-        <label for="switch">
-          <input type="checkbox" name="switch" id="switch">
-          <span class="slider"></span>
-        </label>
-        Yearly Billing <span class="discount">25% <span class="mob-hide">discount</span></span>
-      </div>
+    <div class="toggle">
+      <div class="yearly-bill">Monthly Billing</div>   
+      <label class="switch">
+        <input type="checkbox" class="checkbox">
+        <span class="toggle-cost">
+        </span>
+      </label>
+      <div class="monthly-bill">Yearly Billing</div> <span class="discount">25% <span class="mob-hide">discount</span></span>
+    </div>   
 
       <div class="bullets">
         <ul>
