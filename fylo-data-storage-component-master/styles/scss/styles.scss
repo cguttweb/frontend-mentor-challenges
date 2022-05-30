@@ -113,6 +113,15 @@ span {
     max-width: 1440px;
   }
 
+  .images {
+    padding: 2rem 9rem 1rem 2rem;
+    text-align: left;
+  }
+
+  .icons img {
+    margin-left: 0.5rem;
+  }
+
   .space {
     padding: 1rem;
     width: 40%;
@@ -120,18 +129,21 @@ span {
   }
   
   .left {
+    // border-radius: 0;
     font-size: 1rem;
     left: 280px;
     top: -165px;
     padding: 0.5rem;
   }
-  
-  .space .left {
-    // width: 0;
-    // height: 0;
-    // border-left: 50px solid transparent;
-    // border-right: 50px solid transparent;
-    // border-bottom: 5px solid red;
+
+  .triangle {
+    border-top: 20px solid var(--pale-blue);
+    border-left: 30px solid transparent;
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 158px;
+    top: 20px;
   }
 
 }

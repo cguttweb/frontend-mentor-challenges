@@ -1,77 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 :root {
-  --peach: hsl(6, 100%, 80%);
-  --bright-pink: hsl(335, 100%, 65%);
-  --pale-blue: hsl(243, 100%, 93%);
-  --grayish-blue: hsl(229, 7%, 55%);
-  --dark-blue: hsl(228, 56%, 26%);
-  --very-dark-blue: hsl(229, 57%, 11%);
-  font-family: "Raleway", sans-serif;
-}
+  --peach: #ffa399;
+  --bright-pink: #ff4d97;
+  --pale-blue: #dddbff;
+  --grayish-blue: #848794;
+  --dark-blue: #1d2c67;
+  --very-dark-blue: #0c122c;
+  font-family: 'Raleway', sans-serif; }
 
 body {
   background-image: url(../../images/bg-mobile.png);
-  background-size: cover;
-}
+  background-size: cover; }
 
 main {
   margin: 4rem auto;
-  max-width: 375px;
-}
+  max-width: 375px; }
 
 section {
   background-color: var(--dark-blue);
-  color: var(--pale-blue);
-}
+  color: var(--pale-blue); }
 
 .images {
   border-radius: 0 6rem 0 0;
-  padding: 2rem 3rem;
-}
+  padding: 2rem 3rem; }
 
 .images img {
-  padding: 1rem 0;
-}
+  padding: 1rem 0; }
 
 .icons img {
   background-color: var(--very-dark-blue);
   border-radius: 1rem;
-  padding: 1rem;
-}
+  padding: 1rem; }
 
 .space {
   border-radius: 1rem;
   margin-top: 1rem;
   padding: 1rem 2rem;
-  text-align: center;
-}
+  text-align: center; }
 
 .space p {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 .space p + span {
-  background-color: red;
-}
+  background-color: red; }
 
 input {
   -webkit-appearance: none;
   background-image: -webkit-linear-gradient(right, var(--bright-pink), var(--peach));
   border-radius: 1rem;
-  width: 100%;
-}
+  width: 100%; }
 
 span {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 .zero {
-  float: left;
-}
+  float: left; }
 
 .thousand {
-  float: right;
-}
+  float: right; }
 
 .left {
   background-color: var(--pale-blue);
@@ -85,40 +71,49 @@ span {
   text-align: center;
   top: 45px;
   width: 180px;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .number {
   color: var(--very-dark-blue);
-  font-size: 3rem;
-}
+  font-size: 3rem; }
 
 @media screen and (min-width: 768px) {
   body {
     background-image: url(../../images/bg-desktop.png);
     background-position: bottom 50px right;
     background-repeat: no-repeat;
-    height: 95vh;
-  }
+    height: 95vh; }
 
   main {
     display: flex;
     justify-content: space-evenly;
-    max-width: 1440px;
-  }
+    max-width: 1440px; }
+
+  .images {
+    padding: 2rem 9rem 1rem 2rem;
+    text-align: left; }
+
+  .icons img {
+    margin-left: 0.5rem; }
 
   .space {
     padding: 1rem;
     width: 40%;
-    text-align: left;
-  }
+    text-align: left; }
 
   .left {
     font-size: 1rem;
     left: 280px;
     top: -165px;
-    padding: 0.5rem;
-  }
-}
+    padding: 0.5rem; }
+
+  .triangle {
+    border-top: 20px solid var(--pale-blue);
+    border-left: 30px solid transparent;
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 158px;
+    top: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
