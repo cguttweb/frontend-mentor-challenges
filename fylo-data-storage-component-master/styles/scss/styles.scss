@@ -25,6 +25,10 @@ section {
   color: var(--pale-blue);
 }
 
+section h2 {
+  display: none;
+}
+
 .images {
   border-radius: 0 6rem 0 0;
   padding: 2rem 3rem;
@@ -129,7 +133,6 @@ span {
   }
   
   .left {
-    // border-radius: 0;
     font-size: 1rem;
     left: 280px;
     top: -165px;
