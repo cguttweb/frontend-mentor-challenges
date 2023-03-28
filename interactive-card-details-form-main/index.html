@@ -21,12 +21,68 @@
     }
   </style>
 
-  <style></style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+    :root {
+      --gradient-start: hsl(249, 99%, 64%);
+      --gradient-end: hsl(278, 94%, 30%);
+      --error-red: hsl(0, 100%, 66%);
+      --white: hsl(0, 0%, 100%);
+      --light-grayish-violet: hsl(270, -3%, 87%);
+      --dark-grayish-violet: hsl(279, -6%, 55%);
+      --very-dark-violet: hsl(278, 68%, 11%);
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+    }
+
+    main {
+      margin: auto;
+      width: 375px;
+    }
+
+    .btn {
+      background: var(--very-dark-violet);
+      border: 1px solid var(--very-dark-violet);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 16px;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    /* card styles */
+    .card {
+      background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end))
+    }
+
+    /* form styles */
+
+    label {
+      display: block;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    fieldset input {
+      width: 30%;
+    }
+
+    fieldset label {
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <div class="card">
+      <img src="./images/card-logo.svg" alt="">
       <p>0000 0000 0000 0000</p>
       <span>Jane Appleseed</span>
       <span>00/00</span>
@@ -36,26 +92,22 @@
 
     <form action="#" method="post">
 
-      <label>Cardholder Name
-        <input type="text" name="cardholdername" id="cardholdername"
-          placeholder="e.g. Jane Appleseed">
-      </label>
+      <label for="cardholdername">Cardholder Name</label>
+      <input type="text" name="cardholdername" id="cardholdername"
+        placeholder="e.g. Jane Appleseed">
 
 
-      <label>Card Number
-        <input type="text" name="cardnumber" id="cardnumber"
-          placeholder="e.g. 1234 5678 9123 0000">
-      </label>
+      <label for="cardnumber">Card Number</label>
+      <input type="text" name="cardnumber" id="cardnumber"
+        placeholder="e.g. 1234 5678 9123 0000">
 
-
-      <label>Exp. Date (MM/YY)
+      <fieldset>
+        <label for="expmonth">Exp. Date (MM/YY)</label>
+        <label for="cvc">CVC</label>
         <input type="text" name="month" id="expmonth" placeholder="MM">
         <input type="text" name="year" id="expyear" placeholder="YY">
-      </label>
-
-      <label>CVC
         <input type="text" name="cvc" id="cvc" placeholder="e.g. 123">
-      </label>
+      </fieldset>
 
       <input class="btn" type="submit" value="Confirm" />
     </form>
@@ -63,7 +115,7 @@
 
     <div class="confirmation">
       <!-- Completed state start -->
-
+      <img src="./images/icon-complete.svg" />
       <h2>Thank you!</h2>
       <p>We've added your card details</p>
       <button class="btn">Continue</button>
