@@ -58,26 +58,34 @@
     /* card styles */
     .card {
       background-image: url(./images/bg-main-mobile.png);
+      height: 240px;
     }
 
-    .card-front {
-      background-image: url(./images/bg-card-front.png);
+    .card img {
+      max-width: 375px;
+      width: 250px;
+    }
+
+    .card-back {
       border-radius: 0.5rem;
       color: var(--white);
       margin: 1rem;
       padding: 1rem;
-      /* position: absolute; */
+      position: absolute;
+      top: 0;
       width: 250px;
-      /* z-index: 10; */
     }
 
-    .card-back {
-      background-image: url(./images/bg-card-back.png);
+    .card-front {
+      border-radius: 0.5rem;
+      color: var(--white);
+      margin: 1rem;
+      padding: 1rem;
+      position: relative;
       width: 250px;
     }
 
     /* form styles */
-
     form {
       align-items: center;
       display: flex;
@@ -114,11 +122,7 @@
     }
 
     fieldset span {
-      background-color: var(--error-red);
-      /* align-content: center;
-      align-self: center; */
-      /* align-items: center; */
-      justify-content: space-between;
+      justify-items: center;
     }
 
     /* thank you confirmation */
@@ -133,14 +137,15 @@
 
 <body>
   <main>
-    <!-- <section> -->
     <div class="card">
       <div class="card-back">
-        <img src="./images/card-logo.svg" alt="">
+        <img src="./images/bg-card-back.png" alt="" />
         <span>000</span>
+
       </div>
       <div class="card-front">
-        <img src="./images/card-logo.svg" alt="">
+        <img src="./images/bg-card-front.png" alt="" />
+        <img src="./images/card-logo.svg" alt="" />
         <p>0000 0000 0000 0000</p>
         <span>Jane Appleseed</span>
         <span>00/00</span>
@@ -167,9 +172,7 @@
 
       <input class="btn" type="submit" value="Confirm" />
     </form>
-    <!-- </section> -->
 
-    <!-- <section> -->
     <div class="confirmation">
       <!-- Completed state start -->
       <img src="./images/icon-complete.svg" />
@@ -177,7 +180,6 @@
       <p>We've added your card details</p>
       <button class="btn">Continue</button>
     </div>
-    <!-- </section> -->
 
   </main>
 
